@@ -3,9 +3,9 @@ package entity;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-@Embeddable
+//@Embeddable
 public class Endereco {
-	
+/*	
 	@Column(nullable = false)
     private String logradouro;
 	
@@ -35,5 +35,5 @@ public class Endereco {
 	public void setNumero(Integer numero) {
 		this.numero = numero;
 	}
-    
+    */
 }

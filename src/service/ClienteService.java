@@ -6,10 +6,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import entity.Cliente;
+//import entity.Cliente;
 
 public class ClienteService {
-
+/*
 	@PersistenceContext
 	private EntityManager em;
 	
@@ -33,4 +33,5 @@ public class ClienteService {
 		TypedQuery<Cliente> q = em.createQuery("SELECT c FROM Cliente c ORDER BY c.nome", Cliente.class);
 		return q.getResultList();
 	}
+	*/
 }
