@@ -1,6 +1,7 @@
 package beans;
 
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -11,12 +12,12 @@ import entity.Fornecedor;
 
 @Named
 @SessionScoped
-public class FornecedorBean {
+public class FornecedorBean implements Serializable {
 	
 	@EJB
 	private FornecedorService fornecedorService; 
 	
-	public List<Fornecedor> getFornecedor(){
+	public List<Fornecedor> getFornecedores(){
 		return fornecedorService.listAll();
 	}
 	
