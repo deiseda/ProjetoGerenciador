@@ -26,8 +26,8 @@
  		<h:outputText value="#{f.descricao}"></h:outputText>
  	</p:column>
  	<p:column>
- 		<f:facet name="header">Ações</f:facet>
- 		<input type="button" value="Excluir" action="#{searchFornecedorBean.excluir(f.idFornecedor)}"/>
+ 		<f:facet name="header">Ações</f:facet> 		
+ 		<p:commandButton value="Excluir" action="#{searchFornecedorBean.excluir(f.idFornecedor)}" />
  	</p:column>
  	
  </p:dataTable>	
