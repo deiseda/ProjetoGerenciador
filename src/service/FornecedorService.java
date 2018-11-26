@@ -33,7 +33,7 @@ public class FornecedorService {
 	}
 	
 	public List<Fornecedor> listAll(){
-		TypedQuery<Fornecedor> q = em.createQuery("SELECT f FROM Fornecedor f ORDER BY f.nome", Fornecedor.class);
+		TypedQuery<Fornecedor> q = em.createQuery("SELECT f FROM Fornecedor f ORDER BY f.descricao", Fornecedor.class);
 		return q.getResultList();
 	}
 

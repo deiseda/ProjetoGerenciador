@@ -6,7 +6,8 @@ import java.lang.String;
 import javax.persistence.*;
 
 
-@Entity(name = "FORNECEDOR")
+@Entity
+@Table(name = "FORNECEDOR", schema ="GERENCIADOR")
 public class Fornecedor implements Serializable {
 
 	   

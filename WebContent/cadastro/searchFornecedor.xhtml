@@ -16,63 +16,23 @@
     <p:menuitem value="Relatórios" url="#" />
  
 </p:breadCrumb>
+<h:outputStylesheet library="css" name="styles.css" />
 <h:form id="form">
-	<p:outputPanel id="datatable-group" style="text-align:center; padding-top:20px;">
-						<ui:fragment rendered="">
-
-
-							<p:dataTable id="datatableConta" var="contaBancaria"
-								style="word-wrap: break-word;" border="1" cellpadding="2"
-								cellspacing="0" paginator="true" paginatorPosition="bottom"
-								rows="10" emptyMessage="Nenhuma conta encontrada"
-								value="">
-
-								<p:column headerText="Banco" style="width: 150px;">
-									<h:outputText value="teste" />
-								</p:column>
-								<p:column headerText="Agência" style="width: 100px;">
-									<h:outputText value="teste" />
-								</p:column>
-								
-
-								<p:column headerText="Ações" id="acoes" style="width: 150px; text-align:center;">
-									<div class="center">
-										<p:commandLink id="editConta" title="Editar"
-											
-											immediate="true" global="false"
-											styleClass="btn btn-default icon-btn">
-											<i class="fa fa-pencil-square-o"></i>
-										</p:commandLink>
-
-										<p:commandLink id="viewConta" title="Visualizar"
-											
-											immediate="true" global="false">
-											<i class="fa fa-eye"></i>
-										</p:commandLink>
-
-										<ui:fragment >
-											<p:commandLink id="ativarConta" title="Ativar"
-												
-												immediate="true" global="false" update="datatableConta"
-												styleClass="btn btn-default icon-btn">
-												<i class="fa fa-toggle-on"></i>
-											</p:commandLink>
-										</ui:fragment>
-										<ui:fragment >
-											<p:commandLink id="inativarConta" title="Inativar"
-												
-												immediate="true" global="false" update="datatableConta"
-												styleClass="btn btn-default icon-btn">
-												<i class="fa fa-toggle-off"></i>
-											</p:commandLink>
-										</ui:fragment>
-									</div>
-								</p:column>
-
-							</p:dataTable>
-
-						</ui:fragment>
-					</p:outputPanel>
+	
+ <p:dataTable value="#{searchFornecedorBean.fornecedores}" var="f" styleClass="tabela" headerClass="cabecalho" ColumnClasse="colDesc">
+ 	<f:facet name="header">Fornecedores</f:facet>
+ 	<p:column>
+ 		<f:facet name="header">Descrição</f:facet>
+ 		<h:outputText value="#{f.descricao}"></h:outputText>
+ 	</p:column>
+ 	<p:column>
+ 		<f:facet name="header">Ações</f:facet>
+ 		<input type="button" value="Excluir" action="#{searchFornecedorBean.excluir(f.idFornecedor)}"/>
+ 	</p:column>
+ 	
+ </p:dataTable>	
+	
+	
 </h:form>
    
 </body>
