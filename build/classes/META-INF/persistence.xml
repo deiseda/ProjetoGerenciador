@@ -8,6 +8,7 @@
 		<class>entity.Produto</class>
 		<properties>
 			<property name="javax.persistence.schema-generation.create-database-schemas" value="false"/>
+			<property name="javax.persistence.schema-generation.database.action" value="create"/>
 		</properties>
 		<!-- Fim Entidades Mapeadas -->
 	</persistence-unit>

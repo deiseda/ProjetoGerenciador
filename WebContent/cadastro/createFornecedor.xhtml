@@ -21,10 +21,10 @@
 		<p:messages id="messages" />
 		<h:panelGrid columns="3" cellpadding="5">
 			<p:outputLabel value="Descrição:"  />
-			<p:inputText id="nome" value="" required="true"  maxlength="150"/>
+			<h:inputText id="nome" value="#{createFornecedorBean.fornecedor.descricao}" required="true"  maxlength="150"/>
 		</h:panelGrid>
 	</p:panel>
-	<p:commandButton value="Gravar" update="panel"  />
+	<p:commandButton value="Gravar" action="#{createFornecedorBean.gravar}" update="panel"  />
 </h:form>
    
 </body>

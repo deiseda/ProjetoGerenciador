@@ -11,6 +11,7 @@ public class Fornecedor implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue
 	@Column(name = "IDFORNECEDOR")
 	private Integer idFornecedor;
 	
